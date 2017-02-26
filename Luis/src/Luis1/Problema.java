@@ -8,7 +8,7 @@ public class Problema {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Tablero t =new Tablero(20,20);//Filas por columnas
+		Tablero t =new Tablero(20,20);//Filas por columnass
 		t.imprimirtablero();
 		printsolution(contargrupos(t));
 	}
