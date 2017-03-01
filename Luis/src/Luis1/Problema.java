@@ -8,7 +8,7 @@ public class Problema {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Tablero t =new Tablero(20,20);//Filas por columnass
+		Tablero t =new Tablero(14,14);//Filas por columnass
 		t.imprimirtablero();
 		printsolution(contargrupos(t));
 	}
@@ -44,9 +44,10 @@ public class Problema {
 		return  grupos;
 	}
 	public static void printsolution(ArrayList<ArrayList> grupos){
+		int actual=1;
 		for(int k=0;k<grupos.size();k++){
 			ArrayList<Casilla> aux= grupos.get(k);
-			System.out.println("Grupo nÂº : "+k);
+			System.out.println("Grupo nº : "+ actual++);
 			for(int p=0;p<aux.size();p++){
 				System.out.print(aux.get(p).printcoordinates()+" ");
 			}
@@ -55,7 +56,6 @@ public class Problema {
 	}
 	public static ArrayList recursivo(Tablero t,Casilla c,ArrayList grupo){
 			t.casilla(c.getX(), c.getY()).setVisited(true);
-			c.setVisited(true);
 			grupo.add(c);
 		int i,j;
 		for(i=-1;i<=1;i++){
